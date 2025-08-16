@@ -6,13 +6,14 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    /* Softer light theme with reduced opacity */
+    --background: 0 0% 99%;
     --foreground: 222 84% 4.9%;
 
-    --card: 0 0% 100%;
+    --card: 0 0% 100% / 0.7;
     --card-foreground: 222 84% 4.9%;
 
-    --popover: 0 0% 100%;
+    --popover: 0 0% 100% / 0.95;
     --popover-foreground: 222 84% 4.9%;
 
     /* Navy blue primary with professional accent */
@@ -21,10 +22,10 @@
     --primary-light: 213 94% 25%;
     --primary-glow: 213 100% 50%;
 
-    --secondary: 210 20% 96%;
+    --secondary: 210 20% 98% / 0.6;
     --secondary-foreground: 213 94% 13%;
 
-    --muted: 210 40% 96%;
+    --muted: 210 40% 98% / 0.5;
     --muted-foreground: 215 16% 47%;
 
     --accent: 213 94% 13%;
@@ -33,21 +34,21 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
+    --border: 214 32% 91% / 0.6;
+    --input: 214 32% 93% / 0.8;
     --ring: 213 94% 13%;
 
     --radius: 0.75rem;
 
-    /* Professional gradients */
+    /* Professional gradients with reduced opacity */
     --gradient-primary: linear-gradient(135deg, hsl(213 94% 13%), hsl(213 94% 25%));
-    --gradient-hero: linear-gradient(135deg, hsl(213 94% 13% / 0.95), hsl(213 94% 25% / 0.9));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 20% 98%));
+    --gradient-hero: linear-gradient(135deg, hsl(213 94% 13% / 0.03), hsl(213 94% 25% / 0.05));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.4), hsl(210 20% 98% / 0.6));
     
-    /* Professional shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(213 94% 13% / 0.2);
-    --shadow-card: 0 4px 16px -4px hsl(213 94% 13% / 0.1);
-    --shadow-glow: 0 0 40px hsl(213 100% 50% / 0.3);
+    /* Professional shadows with softer opacity */
+    --shadow-elegant: 0 10px 30px -10px hsl(213 94% 13% / 0.08);
+    --shadow-card: 0 4px 16px -4px hsl(213 94% 13% / 0.04);
+    --shadow-glow: 0 0 40px hsl(213 100% 50% / 0.15);
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -163,12 +164,13 @@
   }
 
   .tech-tag {
-    @apply bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium;
+    @apply bg-primary/5 text-primary px-3 py-1 rounded-full text-sm font-medium border border-primary/10;
+    backdrop-filter: blur(8px);
     transition: var(--transition-smooth);
   }
 
   .tech-tag:hover {
-    @apply bg-primary/20 scale-105;
+    @apply bg-primary/10 scale-105;
   }
 
   .section-reveal {
