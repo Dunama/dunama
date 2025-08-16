@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
+import { ThemeToggle } from "./ThemeToggle"
 import { Menu, X } from "lucide-react"
 
 export function Navigation() {
@@ -39,16 +40,18 @@ export function Navigation() {
     }`}>
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="text-xl font-bold text-primary hover:text-primary-light transition-colors"
-          >
-            DD
-          </button>
+          {/* Left: Logo */}
+          <div className="flex items-center flex-1">
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="text-xl font-bold text-primary hover:text-primary-light transition-colors"
+            >
+              DD
+            </button>
+          </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Center: Navigation (desktop) */}
+          <div className="hidden md:flex items-center justify-center flex-1 space-x-10">
             {navItems.map((item) => (
               <button
                 key={item.label}
@@ -60,19 +63,25 @@ export function Navigation() {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? (
-              <X className="h-5 w-5" />
-            ) : (
-              <Menu className="h-5 w-5" />
-            )}
-          </Button>
+          {/* Right: Actions (desktop) and mobile menu button) */}
+          <div className="flex items-center justify-end flex-1 space-x-2">
+            <div className="hidden md:flex items-center">
+              <ThemeToggle />
+            </div>
+
+            <Button
+              variant="ghost"
+              size="icon"
+              className="md:hidden"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -88,6 +97,9 @@ export function Navigation() {
                   {item.label}
                 </button>
               ))}
+              <div className="px-4 pt-2">
+                <ThemeToggle className="w-9 h-9" />
+              </div>
             </div>
           </div>
         )}

@@ -27,7 +27,7 @@ export function HeroSection() {
           <div className="relative inline-block">
             <div className="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full overflow-hidden border-4 border-primary/20 shadow-glow glow-effect">
               <img
-                src="/lovable-uploads/33d77fa0-0685-4665-b7b8-b9162299921c.png"
+                src="/uploads/33d77fa0-0685-4665-b7b8-b9162299921c.png"
                 alt="Dunama Dahiru - Software Engineer"
                 className="w-full h-full object-cover"
               />

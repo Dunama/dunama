@@ -10,8 +10,7 @@ import { ContactSection } from "@/components/ContactSection"
 const Index = () => {
   return (
     <main className="min-h-screen bg-background">
-      <Navigation />
-      <ThemeToggle />
+  <Navigation />
       
       <HeroSection />
       <AboutSection />
