@@ -4,10 +4,10 @@ import { Github, Linkedin, Mail, MapPin, Phone, Facebook, Twitter } from "lucide
 
 export function HeroSection() {
   const socialLinks = [
-    { icon: Github, href: "https://github.com/DunamaDahiru", label: "GitHub" },
+    { icon: Github, href: "https://github.com/Dunama", label: "GitHub" },
     { icon: Linkedin, href: "https://linkedin.com/in/dunama-dahiru", label: "LinkedIn" },
-    { icon: Facebook, href: "https://facebook.com/Dunama.Dahiru", label: "Facebook" },
-    { icon: Twitter, href: "https://x.com/DahiruDuna", label: "X (Twitter)" },
+    { icon: Facebook, href: "https://www.facebook.com/share/1BmRrs4isn/", label: "Facebook" },
+    { icon: Twitter, href: "https://x.com/DahiruDuna32110?t=gvrC9jJ4o5KNCDTxmbLVqw&s=09", label: "X (Twitter)" },
   ]
 
   const contactInfo = [
