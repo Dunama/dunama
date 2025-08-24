@@ -28,7 +28,7 @@ export function ContactSection() {
     {
       icon: Github,
       label: "GitHub",
-      url: "https://github.com/DunamaDahiru",
+      url: "https://github.com/Dunama",
       color: "hover:text-gray-900 dark:hover:text-gray-100"
     },
     {
@@ -40,13 +40,13 @@ export function ContactSection() {
     {
       icon: Facebook,
       label: "Facebook",
-      url: "https://facebook.com/Dunama.Dahiru",
+      url: "https://www.facebook.com/share/1BmRrs4isn/",
       color: "hover:text-blue-500"
     },
     {
       icon: Twitter,
       label: "X (Twitter)",
-      url: "https://x.com/DahiruDuna",
+      url: "https://x.com/DahiruDuna32110?t=gvrC9jJ4o5KNCDTxmbLVqw&s=09",
       color: "hover:text-gray-900 dark:hover:text-gray-100"
     }
   ]
