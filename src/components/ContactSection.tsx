@@ -34,7 +34,7 @@ export function ContactSection() {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      url: "https://linkedin.com/in/dunama-dahiru",
+      url: "https://www.linkedin.com/in/dunama-dahiru-186297348",
       color: "hover:text-blue-600"
     },
     {

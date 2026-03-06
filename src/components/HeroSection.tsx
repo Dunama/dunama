@@ -1,15 +1,8 @@
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Github, Linkedin, Mail, MapPin, Phone, Facebook, Twitter } from "lucide-react"
+import { Mail, MapPin, Phone } from "lucide-react"
 
 export function HeroSection() {
-  const socialLinks = [
-    { icon: Github, href: "https://github.com/Dunama", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com/in/dunama-dahiru", label: "LinkedIn" },
-    { icon: Facebook, href: "https://www.facebook.com/share/1BmRrs4isn/", label: "Facebook" },
-    { icon: Twitter, href: "https://x.com/DahiruDuna32110?t=gvrC9jJ4o5KNCDTxmbLVqw&s=09", label: "X (Twitter)" },
-  ]
-
   const contactInfo = [
     { icon: MapPin, text: "Yola, Nigeria" },
     { icon: Phone, text: "+234 8100333629" },
@@ -85,22 +78,6 @@ export function HeroSection() {
               View My Work
             </Button>
           </div>
-        </div>
-
-        {/* Social Links */}
-        <div className="flex justify-center gap-4 animate-fade-in">
-          {socialLinks.map((social, index) => (
-            <a
-              key={index}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-12 h-12 rounded-full bg-card/80 backdrop-blur-sm border border-border/50 flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110 hover:shadow-glow"
-              aria-label={social.label}
-            >
-              <social.icon className="w-5 h-5" />
-            </a>
-          ))}
         </div>
       </div>
     </section>

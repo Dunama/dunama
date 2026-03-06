@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { ThemeToggle } from "./ThemeToggle"
 import { Menu, X } from "lucide-react"
 
 export function Navigation() {
@@ -63,12 +62,8 @@ export function Navigation() {
             ))}
           </div>
 
-          {/* Right: Actions (desktop) and mobile menu button) */}
+          {/* Right: Mobile menu button */}
           <div className="flex items-center justify-end flex-1 space-x-2">
-            <div className="hidden md:flex items-center">
-              <ThemeToggle />
-            </div>
-
             <Button
               variant="ghost"
               size="icon"
@@ -97,9 +92,6 @@ export function Navigation() {
                   {item.label}
                 </button>
               ))}
-              <div className="px-4 pt-2">
-                <ThemeToggle className="w-9 h-9" />
-              </div>
             </div>
           </div>
         )}

@@ -1,7 +1,6 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { ExternalLink, Github, Zap, Users, GraduationCap } from "lucide-react"
+import { Zap, Users, GraduationCap } from "lucide-react"
 
 export function ProjectsSection() {
   const projects = [
@@ -99,49 +98,17 @@ export function ProjectsSection() {
                 </div>
                 
                 <div className="mt-auto">
-                  <div className="flex flex-wrap gap-2 mb-6">
+                  <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech, idx) => (
                       <Badge key={idx} variant="secondary" className="tech-tag text-xs">
                         {tech}
                       </Badge>
                     ))}
                   </div>
-                  
-                  <div className="flex gap-2">
-                    <Button 
-                      size="sm" 
-                      variant="outline" 
-                      className="flex-1 text-xs"
-                      onClick={() => window.open(`https://github.com/DunamaDahiru`, '_blank')}
-                    >
-                      <Github className="w-3 h-3 mr-1" />
-                      Code
-                    </Button>
-                    <Button 
-                      size="sm" 
-                      className="flex-1 text-xs"
-                      disabled={project.status === "In Development"}
-                    >
-                      <ExternalLink className="w-3 h-3 mr-1" />
-                      Demo
-                    </Button>
-                  </div>
                 </div>
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <Button 
-            size="lg" 
-            variant="outline" 
-            className="btn-outline"
-            onClick={() => window.open('https://github.com/DunamaDahiru', '_blank')}
-          >
-            <Github className="w-5 h-5 mr-2" />
-            View All Projects on GitHub
-          </Button>
         </div>
       </div>
     </section>
