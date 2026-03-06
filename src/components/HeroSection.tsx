@@ -41,7 +41,7 @@ export function HeroSection() {
               Software Engineer
             </Badge>
             <Badge variant="outline" className="px-4 py-2 text-lg">
-              Full-Stack Developer
+              Backend Developer
             </Badge>
           </div>
         </div>
